@@ -15,7 +15,7 @@ class MainPresenter(val view : MainView) {
             }
             R.id.btn_counter3 -> {
                 val nextValue = model.next(2)
-                view.setButtonText(3, nextValue.toString())
+                view.setButtonText(2, nextValue.toString())
             }
         }
     }
