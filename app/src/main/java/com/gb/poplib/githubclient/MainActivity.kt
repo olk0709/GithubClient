@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity(), MainView {
                 }
             }
 
-            
+
             presenter.counterClick(it.id)
         }
 
