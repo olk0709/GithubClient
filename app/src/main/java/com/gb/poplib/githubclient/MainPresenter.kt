@@ -6,15 +6,15 @@ class MainPresenter(val view : MainView) {
     fun counterClick(id: Int) {
         when(id) {
             COUNTER_1 -> {
-                val nextValue = model.next(COUNTER_1)
+                val nextValue = model.next(CountersModel.COUNTER_1)
                 view.setButtonText(COUNTER_1, nextValue.toString())
             }
             COUNTER_2 -> {
-                val nextValue = model.next(COUNTER_2)
+                val nextValue = model.next(CountersModel.COUNTER_2)
                 view.setButtonText(COUNTER_2, nextValue.toString())
             }
             COUNTER_3 -> {
-                val nextValue = model.next(COUNTER_3)
+                val nextValue = model.next(CountersModel.COUNTER_3)
                 view.setButtonText(COUNTER_3, nextValue.toString())
             }
         }
