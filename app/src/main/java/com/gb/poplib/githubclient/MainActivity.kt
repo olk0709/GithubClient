@@ -19,6 +19,23 @@ class MainActivity : AppCompatActivity(), MainView {
         setContentView(vb?.root)
 
         val listener = View.OnClickListener {
+
+            val id = when(it.id){
+                R.id.btn_counter1 ->{
+                    MainPresenter.COUNTER_1
+                }
+                R.id.btn_counter2 ->{
+                    MainPresenter.COUNTER_2
+                }
+                R.id.btn_counter3 ->{
+                    MainPresenter.COUNTER_3
+                }
+                else ->{
+                    MainPresenter.COUNTER_1
+                }
+            }
+
+
             presenter.counterClick(it.id)
         }
 

@@ -5,18 +5,24 @@ class MainPresenter(val view : MainView) {
 
     fun counterClick(id: Int) {
         when(id) {
-            R.id.btn_counter1 -> {
-                val nextValue = model.next(0)
-                view.setButtonText(0, nextValue.toString())
+            COUNTER_1 -> {
+                val nextValue = model.next(CountersModel.COUNTER_1)
+                view.setButtonText(COUNTER_1, nextValue.toString())
             }
-            R.id.btn_counter2 -> {
-                val nextValue = model.next(1)
-                view.setButtonText(1, nextValue.toString())
+            COUNTER_2 -> {
+                val nextValue = model.next(CountersModel.COUNTER_2)
+                view.setButtonText(COUNTER_2, nextValue.toString())
             }
-            R.id.btn_counter3 -> {
-                val nextValue = model.next(2)
-                view.setButtonText(3, nextValue.toString())
+            COUNTER_3 -> {
+                val nextValue = model.next(CountersModel.COUNTER_3)
+                view.setButtonText(COUNTER_3, nextValue.toString())
             }
         }
+    }
+
+    companion object{
+        const val COUNTER_1 = 0;
+        const val COUNTER_2 = 1;
+        const val COUNTER_3 = 2;
     }
 }
